@@ -1,0 +1,15 @@
+<div class="container-fluid card" *ngFor="let logincontent of LoginContent">
+    <div class="row">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6 pull-left">
+                    <h5 role="alert">Username: {{ logincontent.username }}</h5>
+                </div>
+                <div class="col-6 pull-right">
+                    <h5 role="alert">Email ID: {{ logincontent.email }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>

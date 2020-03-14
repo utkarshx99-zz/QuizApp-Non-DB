@@ -1,0 +1,332 @@
+<div class="container-fluid card" *ngFor="let logincontent of LoginContent">
+    <div class="row">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6 pull-left">
+                    <h5 role="alert">Username: {{ logincontent.username }}</h5>
+                </div>
+                <div class="col-6 pull-right">
+                    <h5 role="alert">Email ID: {{ logincontent.email }}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="container">
+    <div class="card w-60">
+        <h5 class="card-header text-center">Input your quiz data below</h5>
+        <form class="card-body text-center" #f=ngForm (ngSubmit)="f.form.valid" novalidate>
+            <table class="table">
+                <tbody class="table-bordered">
+                    <td colspan="5">
+                        <label for="">Question No. 1</label>
+                        <input type="text" name="q1" class="form-control" [(ngModel)]="model.q1" #q1="ngModel" [ngClass]="{ 'is-invalid': q1.invalid }" required>
+                        <div *ngIf="q1.invalid" class="invalid-feedback">
+                            <div *ngIf="q1.errors.required">Question 1 is Required</div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option A</label>
+                                <input type="text" name="q1ch1" class="form-control" [(ngModel)]="model.q1ch1" #q1ch1="ngModel" [ngClass]="{ 'is-invalid': q1ch1.invalid }" required>
+                                <div *ngIf="q1ch1.invalid" class="invalid-feedback">
+                                    <div *ngIf="q1ch1.errors.required">First Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option B</label>
+                                <input type="text" name="q1ch2" class="form-control" [(ngModel)]="model.q1ch2" #q1ch2="ngModel" [ngClass]="{ 'is-invalid': q1ch2.invalid }" required>
+                                <div *ngIf="q1ch2.invalid" class="invalid-feedback">
+                                    <div *ngIf="q1ch2.errors.required">Second Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option C</label>
+                                <input type="text" name="q1ch3" class="form-control" [(ngModel)]="model.q1ch3" #q1ch3="ngModel" [ngClass]="{ 'is-invalid': q1ch3.invalid }" required>
+                                <div *ngIf="q1ch3.invalid" class="invalid-feedback">
+                                    <div *ngIf="q1ch3.errors.required">Third Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option D</label>
+                                <input type="text" name="q1ch4" class="form-control" [(ngModel)]="model.q1ch4" #q1ch4="ngModel" [ngClass]="{ 'is-invalid': q1ch4.invalid }" required>
+                                <div *ngIf="q1ch4.invalid" class="invalid-feedback">
+                                    <div *ngIf="q1ch4.errors.required">Forth Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <label>Enter the Correct Option (A,B,C,D)</label>
+                        <input type="text" class="form-control" name="q1correctOption" [(ngModel)]="model.q1correctOption" #q1correctOption="ngModel" [ngClass]="{ 'is-invalid': q1correctOption.invalid }" placeholder="Correct Answer" required>
+                        <div *ngIf="q1correctOption.invalid" class="invalid-feedback">
+                            <div *ngIf="q1correctOption.errors.required">Correct Option is required</div>
+                        </div>
+                    </td>
+                </tbody>
+                <br>
+                <tbody class="table-bordered">
+                    <td colspan="5">
+                        <label for="">Question No. 2</label>
+                        <input type="text" name="q2" class="form-control" [(ngModel)]="model.q2" #q2="ngModel" [ngClass]="{ 'is-invalid': q2.invalid }" required>
+                        <div *ngIf="q2.invalid" class="invalid-feedback">
+                            <div *ngIf="q2.errors.required">Question 2 is Required</div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option A</label>
+                                <input type="text" name="q2ch1" class="form-control" [(ngModel)]="model.q2ch1" #q2ch1="ngModel" [ngClass]="{ 'is-invalid': q2ch1.invalid }" required>
+                                <div *ngIf="q2ch1.invalid" class="invalid-feedback">
+                                    <div *ngIf="q2ch1.errors.required">First Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option B</label>
+                                <input type="text" name="q2ch2" class="form-control" [(ngModel)]="model.q2ch2" #q2ch2="ngModel" [ngClass]="{ 'is-invalid': q2ch2.invalid }" required>
+                                <div *ngIf="q2ch2.invalid" class="invalid-feedback">
+                                    <div *ngIf="q2ch2.errors.required">Second Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option C</label>
+                                <input type="text" name="q2ch3" class="form-control" [(ngModel)]="model.q2ch3" #q2ch3="ngModel" [ngClass]="{ 'is-invalid': q2ch3.invalid }" required>
+                                <div *ngIf="q2ch3.invalid" class="invalid-feedback">
+                                    <div *ngIf="q2ch3.errors.required">Third Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option D</label>
+                                <input type="text" name="q2ch4" class="form-control" [(ngModel)]="model.q2ch4" #q2ch4="ngModel" [ngClass]="{ 'is-invalid': q2ch4.invalid }" required>
+                                <div *ngIf="q2ch4.invalid" class="invalid-feedback">
+                                    <div *ngIf="q2ch4.errors.required">Forth Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <label>Enter the Correct Option (A,B,C,D)</label>
+                        <input type="text" class="form-control" name="q2correctOption" [(ngModel)]="model.q2correctOption" #q2correctOption="ngModel" [ngClass]="{ 'is-invalid': q2correctOption.invalid }" placeholder="Correct Answer" required>
+                        <div *ngIf="q2correctOption.invalid" class="invalid-feedback">
+                            <div *ngIf="q2correctOption.errors.required">Correct Option is required</div>
+                        </div>
+                    </td>
+                </tbody>
+                <br>
+                <tbody class="table-bordered">
+                    <td colspan="5">
+                        <label for="">Question No. 3</label>
+                        <input type="text" name="q3" class="form-control" [(ngModel)]="model.q3" #q3="ngModel" [ngClass]="{ 'is-invalid': q3.invalid }" required>
+                        <div *ngIf="q3.invalid" class="invalid-feedback">
+                            <div *ngIf="q3.errors.required">Question 3 is Required</div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option A</label>
+                                <input type="text" name="q3ch1" class="form-control" [(ngModel)]="model.q3ch1" #q3ch1="ngModel" [ngClass]="{ 'is-invalid': q3ch1.invalid }" required>
+                                <div *ngIf="q3ch1.invalid" class="invalid-feedback">
+                                    <div *ngIf="q3ch1.errors.required">First Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option B</label>
+                                <input type="text" name="q3ch2" class="form-control" [(ngModel)]="model.q3ch2" #q3ch2="ngModel" [ngClass]="{ 'is-invalid': q3ch2.invalid }" required>
+                                <div *ngIf="q3ch2.invalid" class="invalid-feedback">
+                                    <div *ngIf="q3ch2.errors.required">Second Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option C</label>
+                                <input type="text" name="q3ch3" class="form-control" [(ngModel)]="model.q3ch3" #q3ch3="ngModel" [ngClass]="{ 'is-invalid': q3ch3.invalid }" required>
+                                <div *ngIf="q3ch3.invalid" class="invalid-feedback">
+                                    <div *ngIf="q3ch3.errors.required">Third Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option D</label>
+                                <input type="text" name="q3ch4" class="form-control" [(ngModel)]="model.q3ch4" #q3ch4="ngModel" [ngClass]="{ 'is-invalid': q3ch4.invalid }" required>
+                                <div *ngIf="q3ch4.invalid" class="invalid-feedback">
+                                    <div *ngIf="q3ch4.errors.required">Forth Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <label>Enter the Correct Option (A,B,C,D)</label>
+                        <input type="text" class="form-control" name="q3correctOption" [(ngModel)]="model.q3correctOption" #q3correctOption="ngModel" [ngClass]="{ 'is-invalid': q3correctOption.invalid }" placeholder="Correct Answer" required>
+                        <div *ngIf="q3correctOption.invalid" class="invalid-feedback">
+                            <div *ngIf="q3correctOption.errors.required">Correct Option is required</div>
+                        </div>
+                    </td>
+                </tbody>
+                <br>
+                <tbody class="table-bordered">
+                    <td colspan="5">
+                        <label for="">Question No. 4</label>
+                        <input type="text" name="q4" class="form-control" [(ngModel)]="model.q4" #q4="ngModel" [ngClass]="{ 'is-invalid': q4.invalid }" required>
+                        <div *ngIf="q4.invalid" class="invalid-feedback">
+                            <div *ngIf="q4.errors.required">Question 4 is Required</div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option A</label>
+                                <input type="text" name="q4ch1" class="form-control" [(ngModel)]="model.q4ch1" #q4ch1="ngModel" [ngClass]="{ 'is-invalid': q4ch1.invalid }" required>
+                                <div *ngIf="q4ch1.invalid" class="invalid-feedback">
+                                    <div *ngIf="q4ch1.errors.required">First Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option B</label>
+                                <input type="text" name="q4ch2" class="form-control" [(ngModel)]="model.q4ch2" #q4ch2="ngModel" [ngClass]="{ 'is-invalid': q4ch2.invalid }" required>
+                                <div *ngIf="q4ch2.invalid" class="invalid-feedback">
+                                    <div *ngIf="q4ch2.errors.required">Second Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option C</label>
+                                <input type="text" name="q4ch3" class="form-control" [(ngModel)]="model.q4ch3" #q4ch3="ngModel" [ngClass]="{ 'is-invalid': q4ch3.invalid }" required>
+                                <div *ngIf="q4ch3.invalid" class="invalid-feedback">
+                                    <div *ngIf="q4ch3.errors.required">Third Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option D</label>
+                                <input type="text" name="q4ch4" class="form-control" [(ngModel)]="model.q4ch4" #q4ch4="ngModel" [ngClass]="{ 'is-invalid': q4ch4.invalid }" required>
+                                <div *ngIf="q4ch4.invalid" class="invalid-feedback">
+                                    <div *ngIf="q4ch4.errors.required">Forth Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <label>Enter the Correct Option (A,B,C,D)</label>
+                        <input type="text" class="form-control" name="q4correctOption" [(ngModel)]="model.q4correctOption" #q4correctOption="ngModel" [ngClass]="{ 'is-invalid': q4correctOption.invalid }" placeholder="Correct Answer" required>
+                        <div *ngIf="q4correctOption.invalid" class="invalid-feedback">
+                            <div *ngIf="q4correctOption.errors.required">Correct Option is required</div>
+                        </div>
+                    </td>
+                </tbody>
+                <br>
+                <tbody class="table-bordered">
+                    <td colspan="5">
+                        <label for="">Question No. 5</label>
+                        <input type="text" name="q5" class="form-control" [(ngModel)]="model.q5" #q5="ngModel" [ngClass]="{ 'is-invalid': q5.invalid }" required>
+                        <div *ngIf="q5.invalid" class="invalid-feedback">
+                            <div *ngIf="q5.errors.required">Question 5 is Required</div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option A</label>
+                                <input type="text" name="q5ch1" class="form-control" [(ngModel)]="model.q5ch1" #q5ch1="ngModel" [ngClass]="{ 'is-invalid': q5ch1.invalid }" required>
+                                <div *ngIf="q5ch1.invalid" class="invalid-feedback">
+                                    <div *ngIf="q5ch1.errors.required">First Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option B</label>
+                                <input type="text" name="q5ch2" class="form-control" [(ngModel)]="model.q5ch2" #q5ch2="ngModel" [ngClass]="{ 'is-invalid': q5ch2.invalid }" required>
+                                <div *ngIf="q5ch2.invalid" class="invalid-feedback">
+                                    <div *ngIf="q5ch2.errors.required">Second Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option C</label>
+                                <input type="text" name="q5ch3" class="form-control" [(ngModel)]="model.q5ch3" #q5ch3="ngModel" [ngClass]="{ 'is-invalid': q5ch3.invalid }" required>
+                                <div *ngIf="q5ch3.invalid" class="invalid-feedback">
+                                    <div *ngIf="q5ch3.errors.required">Third Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option D</label>
+                                <input type="text" name="q5ch4" class="form-control" [(ngModel)]="model.q5ch4" #q5ch4="ngModel" [ngClass]="{ 'is-invalid': q5ch4.invalid }" required>
+                                <div *ngIf="q5ch4.invalid" class="invalid-feedback">
+                                    <div *ngIf="q5ch4.errors.required">Forth Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <label>Enter the Correct Option (A,B,C,D)</label>
+                        <input type="text" class="form-control" name="q5correctOption" [(ngModel)]="model.q5correctOption" #q5correctOption="ngModel" [ngClass]="{ 'is-invalid': q5correctOption.invalid }" placeholder="Correct Answer" required>
+                        <div *ngIf="q5correctOption.invalid" class="invalid-feedback">
+                            <div *ngIf="q5correctOption.errors.required">Correct Option is required</div>
+                        </div>
+                    </td>
+                </tbody>
+                <br>
+                <tbody class="table-bordered">
+                    <td colspan="5">
+                        <div class="form-group">
+                            <button type="submit" [disabled]="f.invalid" (click)="toggle()" class="btn btn-primary">Add More Question</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="form-group">
+                            <button type="submit" routerLink="/quizdisplay" [disabled]="f.invalid" (click)="QuizContent(f.value)" class="btn btn-primary ">
+                                Submit
+                            </button>
+                        </div>
+                    </td>
+                </tbody>
+                <br>
+                <tbody class="table-bordered" *ngIf="show">
+                    <td colspan="10">
+                        <label for="">Extra Question</label>
+                        <input type="text" name="qn" class="form-control" [(ngModel)]="model.qn" #qn="ngModel" [ngClass]="{ 'is-invalid': qn.invalid }" required>
+                        <div *ngIf="qn.invalid" class="invalid-feedback">
+                            <div *ngIf="qn.errors.required">Extra Question is Required</div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option 1</label>
+                                <input type="text" name="qnch1" class="form-control" [(ngModel)]="model.qnch1" #qnch1="ngModel" [ngClass]="{ 'is-invalid': qnch1.invalid }" required>
+                                <div *ngIf="qnch1.invalid" class="invalid-feedback">
+                                    <div *ngIf="qnch1.errors.required">First Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option 2</label>
+                                <input type="text" name="qnch2" class="form-control" [(ngModel)]="model.qnch2" #qnch2="ngModel" [ngClass]="{ 'is-invalid': qnch2.invalid }" required>
+                                <div *ngIf="qnch2.invalid" class="invalid-feedback">
+                                    <div *ngIf="qnch2.errors.required">Second Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label>Option 3</label>
+                                <input type="text" name="qnch3" class="form-control" [(ngModel)]="model.qnch3" #qnch3="ngModel" [ngClass]="{ 'is-invalid': qnch3.invalid }" required>
+                                <div *ngIf="qnch3.invalid" class="invalid-feedback">
+                                    <div *ngIf="qnch3.errors.required">Third Option is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Option 4</label>
+                                <input type="text" name="qnch4" class="form-control" [(ngModel)]="model.qnch4" #qnch4="ngModel" [ngClass]="{ 'is-invalid': qnch4.invalid }" required>
+                                <div *ngIf="qnch4.invalid" class="invalid-feedback">
+                                    <div *ngIf="qnch4.errors.required">Forth Option is required</div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <label>Enter the Correct Option (A,B,C,D)</label>
+                        <input type="text" class="form-control" name="qncorrectOption" [(ngModel)]="model.qncorrectOption" #qncorrectOption="ngModel" [ngClass]="{ 'is-invalid': qncorrectOption.invalid }" placeholder="Correct Answer" required>
+                        <div *ngIf="qncorrectOption.invalid" class="invalid-feedback">
+                            <div *ngIf="qncorrectOption.errors.required">Correct Option is required</div>
+                        </div>
+                    </td>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
