@@ -13,3 +13,130 @@
     </div>
 </div>
 <br><br>
+<div class="container card" *ngFor="let quizdatacontent of QuizDataContent">
+    <div class="card-body text-center">{{ quizdatacontent.q1 }}</div>
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q1ch1 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q1ch2 }}</button>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q1ch3 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q1ch4 }}</button>
+        </div>
+    </div>
+    <br/>
+    <div class="form-action">
+        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
+    </div>
+    <br>
+
+    <div class="card-body text-center">{{ quizdatacontent.q2 }}</div>
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q2ch1 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q2ch2 }}</button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q2ch3 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q2ch4 }}</button>
+        </div>
+    </div>
+    <br />
+    <div class="form-action">
+        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
+    </div>
+    <br>
+
+    <div class="card-body text-center">{{ quizdatacontent.q3 }}</div>
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q3ch1 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q3ch2 }}</button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q3ch3 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q3ch4 }}</button>
+        </div>
+    </div>
+    <br />
+    <div class="form-action">
+        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
+    </div>
+    <br>
+
+    <div class="card-body text-center">{{ quizdatacontent.q4 }}</div>
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q4ch1 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q4ch2 }}</button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q4ch3 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q4ch4 }}</button>
+        </div>
+    </div>
+    <br />
+    <div class="form-action">
+        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
+    </div>
+    <br>
+
+    <div class="card-body text-center">{{ quizdatacontent.q5 }}</div>
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q5ch1 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q5ch2 }}</button>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q5ch3 }}</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q5ch4 }}</button>
+        </div>
+    </div>
+    <br />
+    <div class="form-action">
+        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
+    </div>
+    <br>
+
+    <!-- <div class="form-action">
+        <button *ngIf="quizdatacontent.correctOption!=answer && answer!=''" class="btn btn-danger btn-block">
+            Your Answer is Incorrect
+        </button>
+    </div> -->
+</div>

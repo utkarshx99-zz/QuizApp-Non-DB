@@ -278,7 +278,9 @@
                     </td>
                 </tbody>
                 <br>
-                <tbody class="table-bordered" *ngIf="show">
+            </table>
+            <table class="table" *ngIf="show">
+                <tbody class="table-bordered">
                     <td colspan="10">
                         <label for="">Extra Question</label>
                         <input type="text" name="qn" class="form-control" [(ngModel)]="model.qn" #qn="ngModel" [ngClass]="{ 'is-invalid': qn.invalid }" required>
@@ -323,6 +325,13 @@
                         <input type="text" class="form-control" name="qncorrectOption" [(ngModel)]="model.qncorrectOption" #qncorrectOption="ngModel" [ngClass]="{ 'is-invalid': qncorrectOption.invalid }" placeholder="Correct Answer" required>
                         <div *ngIf="qncorrectOption.invalid" class="invalid-feedback">
                             <div *ngIf="qncorrectOption.errors.required">Correct Option is required</div>
+                        </div>
+                    </td>
+                </tbody>
+                <tbody>
+                    <td>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-center">Submit</button>
                         </div>
                     </td>
                 </tbody>
