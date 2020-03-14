@@ -1,142 +1,188 @@
-<div class="container-fluid card" *ngFor="let logincontent of LoginContent">
+<br>
+<div class="container card" *ngFor="let logincontent of LoginContent">
     <div class="row">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-6 pull-left">
-                    <h5 role="alert">Username: {{ logincontent.username }}</h5>
-                </div>
-                <div class="col-6 pull-right">
-                    <h5 role="alert">Email ID: {{ logincontent.email }}</h5>
-                </div>
-            </div>
+        <div class="card-body text-center">
+            <table class="table card-header">
+                <tbody>
+                    <td colspan="10">
+                        <div class="pull-left">
+                            <h5 role="alert">Username: {{ logincontent.username }}</h5>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="pull-right">
+                            <h5 role="alert">Email ID: {{ logincontent.email }}</h5>
+                        </div>
+                    </td>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
 <br><br>
-<div class="container card" *ngFor="let quizdatacontent of QuizDataContent">
-    <div class="card-body text-center">{{ quizdatacontent.q1 }}</div>
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q1ch1 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q1ch2 }}</button>
-        </div>
+<div class="container" *ngFor="let quizdatacontent of QuizDataContent">
+    <div class="card w-60">
+        <h5 class="card-header text-center">Play The Quiz!!</h5>
+        <form class="card-body text-center" novalidate>
+            <table class="table">
+                <tbody class="table-bordered">
+                    <td colspan="10">
+                        <div class="card-header">Question No. 1</div>
+                        <div >Question : </div>
+                        <div class="alert alert-success">{{ quizdatacontent.q1 }}</div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option A</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q1ch1 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option B</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q1ch2 }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option C</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q1ch3 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option D</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q1ch4 }}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>Enter the Correct Option (A,B,C,D)</div>
+                        <input type="text" class="form-control"placeholder="Correct Answer" required>
+                    </td>
+                </tbody>
+                <br>
+                <tbody class="table-bordered">
+                    <td colspan="10">
+                        <div class="card-header">Question No. 2</div>
+                        <div>Question : </div>
+                        <div class="alert alert-success">{{ quizdatacontent.q2 }}</div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option A</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q2ch1 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option B</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q2ch2 }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option C</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q2ch3 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option D</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q2ch4 }}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td colspan="2">
+                        <div>Enter the Correct Option (A,B,C,D)</div>
+                        <input type="text" class="form-control"placeholder="Correct Answer" required>
+                    </td>
+                </tbody>
+                <br>
+                <tbody class="table-bordered">
+                    <td colspan="10">
+                        <div class="card-header">Question No. 3</div>
+                        <div >Question : </div>
+                        <div class="alert alert-success">{{ quizdatacontent.q3 }}</div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option A</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q3ch1 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option B</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q3ch2 }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option C</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q3ch3 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option D</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q3ch4 }}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>Enter the Correct Option (A,B,C,D)</div>
+                        <input type="text" class="form-control"placeholder="Correct Answer" required>
+                    </td>
+                </tbody>
+                <tbody class="table-bordered">
+                    <td colspan="10">
+                        <div class="card-header">Question No. 4</div>
+                        <div >Question : </div>
+                        <div class="alert alert-success">{{ quizdatacontent.q4 }}</div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option A</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q4ch1 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option B</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q4ch2 }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option C</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q4ch3 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option D</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q4ch4 }}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>Enter the Correct Option (A,B,C,D)</div>
+                        <input type="text" class="form-control"placeholder="Correct Answer" required>
+                    </td>
+                </tbody>
+                <tbody class="table-bordered">
+                    <td colspan="10">
+                        <div class="card-header">Question No. 5</div>
+                        <div >Question : </div>
+                        <div class="alert alert-success">{{ quizdatacontent.q5 }}</div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option A</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q5ch1 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option B</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q5ch2 }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option C</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q5ch3 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option D</label>
+                                <div class="alert alert-success">{{ quizdatacontent.q5ch4 }}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>Enter the Correct Option (A,B,C,D)</div>
+                        <input type="text" class="form-control"placeholder="Correct Answer" required>
+                    </td>
+                </tbody>
+            </table>
+        </form>
     </div>
-    <br/>
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q1ch3 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q1ch4 }}</button>
-        </div>
-    </div>
-    <br/>
-    <div class="form-action">
-        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
-    </div>
-    <br>
-
-    <div class="card-body text-center">{{ quizdatacontent.q2 }}</div>
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q2ch1 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q2ch2 }}</button>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q2ch3 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q2ch4 }}</button>
-        </div>
-    </div>
-    <br />
-    <div class="form-action">
-        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
-    </div>
-    <br>
-
-    <div class="card-body text-center">{{ quizdatacontent.q3 }}</div>
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q3ch1 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q3ch2 }}</button>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q3ch3 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q3ch4 }}</button>
-        </div>
-    </div>
-    <br />
-    <div class="form-action">
-        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
-    </div>
-    <br>
-
-    <div class="card-body text-center">{{ quizdatacontent.q4 }}</div>
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q4ch1 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q4ch2 }}</button>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q4ch3 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q4ch4 }}</button>
-        </div>
-    </div>
-    <br />
-    <div class="form-action">
-        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
-    </div>
-    <br>
-
-    <div class="card-body text-center">{{ quizdatacontent.q5 }}</div>
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">A. {{ quizdatacontent.q5ch1 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">B. {{ quizdatacontent.q5ch2 }}</button>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">C. {{ quizdatacontent.q5ch3 }}</button>
-        </div>
-        <div class="col-6">
-            <button class="btn btn-primary btn-block" role="alert">D. {{ quizdatacontent.q5ch4 }}</button>
-        </div>
-    </div>
-    <br />
-    <div class="form-action">
-        <input  type="text" class="btn btn-warning btn-block" placeholder="Input Answer here" />
-    </div>
-    <br>
-
-    <!-- <div class="form-action">
-        <button *ngIf="quizdatacontent.correctOption!=answer && answer!=''" class="btn btn-danger btn-block">
-            Your Answer is Incorrect
-        </button>
-    </div> -->
 </div>
