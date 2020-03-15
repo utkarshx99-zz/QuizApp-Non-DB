@@ -284,7 +284,14 @@
                 </tbody>
                 <br>
             </table>
-            <table class="table" *ngIf="show">
+        </form>
+    </div>
+</div>
+<br>
+<div class="container" *ngIf="show">
+    <div class="card w-60">
+        <form class="card-body" #d=ngForm novalidate>
+            <table class="table">
                 <tbody class="table-bordered">
                     <td colspan="10">
                         <label for="">Extra Question</label>
@@ -336,7 +343,7 @@
                 <tbody>
                     <td>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-center">Submit</button>
+                            <button type="submit" (click)="ExtraQuizContent(d.value)" class="btn btn-primary btn-center">Submit</button>
                         </div>
                     </td>
                 </tbody>
@@ -344,3 +351,4 @@
         </form>
     </div>
 </div>
+<br>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/Services/login.service';
 import { QuizDataService } from 'src/app/Services/quiz-data.service';
+import { ExtraQuestionService } from 'src/app/Services/extra-question.service';
 
 @Component({
   selector: 'app-quizcreate',
@@ -14,7 +15,7 @@ export class QuizcreateComponent implements OnInit {
   public LoginContent = [];
   public show:boolean = false;
 
-  constructor(private ls: LoginService, private qs: QuizDataService) { }
+  constructor(private ls: LoginService, private qs: QuizDataService, private eq: ExtraQuestionService) { }
 
   ngOnInit(): void {
     this.LoginContent = this.ls.fetchLoginData();
@@ -23,6 +24,11 @@ export class QuizcreateComponent implements OnInit {
   QuizContent(obj: any) {
     obj.id = this.qs.fetchQuizData().length + 1;
     this.qs.pushQuizData(obj);
+  }
+
+  ExtraQuizContent(obj: any) {
+    obj.id = this.eq.fetchExtraQuestionData().length + 1;
+    this.eq.pushExtraQuestionData(obj);
   }
 
   toggle() {

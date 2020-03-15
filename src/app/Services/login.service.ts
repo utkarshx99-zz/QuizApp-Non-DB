@@ -11,7 +11,7 @@ export class LoginService {
 
   pushLoginData(obj: any) {
     this.UserLoginData.push(obj);
-    console.log("Sucess");
+    console.log("Success");
   }
 
   fetchLoginData() {
