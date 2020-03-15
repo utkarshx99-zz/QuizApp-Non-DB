@@ -184,7 +184,50 @@
                         <input type="text" class="form-control"placeholder="Correct Answer" required>
                     </td>
                 </tbody>
+                <br>
             </table>
         </form>
     </div>
 </div>
+<br>
+<div class="container" *ngFor="let extraquizquestion of ExtraQuizQuestion">
+    <div class="card w-60">
+        <h5 class="card-header text-center">Extra Questions!!</h5>
+        <div class="card-body text-center" novalidate>
+            <table class="table">
+                <tbody class="table-bordered">
+                    <td colspan="10">
+                        <div class="card-header">Extra Question</div>
+                        <div >Question : </div>
+                        <div class="alert alert-success">{{ extraquizquestion.qn }}</div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option A</label>
+                                <div class="alert alert-success">{{ extraquizquestion.qnch1 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option B</label>
+                                <div class="alert alert-success">{{ extraquizquestion.qnch2 }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col">
+                                <label >Option C</label>
+                                <div class="alert alert-success">{{ extraquizquestion.qnch3 }}</div>
+                            </div>
+                            <div class="form-group col">
+                                <label >Option D</label>
+                                <div class="alert alert-success">{{ extraquizquestion.qnch4 }}</div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div>Enter the Correct Option (A,B,C,D)</div>
+                        <input type="text" class="form-control"placeholder="Correct Answer" required>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
