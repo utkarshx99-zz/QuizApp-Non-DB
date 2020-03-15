@@ -21,5 +21,4 @@ export class QuizdisplayComponent implements OnInit {
     this.QuizDataContent = this.qs.fetchQuizData();
     this.ExtraQuizQuestion = this.eq.fetchExtraQuestionData();
   }
-
 }

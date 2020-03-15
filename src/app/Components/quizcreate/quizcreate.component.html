@@ -271,10 +271,10 @@
                 <tbody class="table-bordered">
                     <td colspan="5">
                         <div class="form-group">
-                            <button type="submit" [disabled]="f.invalid" (click)="toggle()" class="btn btn-primary">Add More Question</button>
+                            <button type="submit" [disabled]="f.invalid" (click)="hideSubmit()" (click)="toggle()" class="btn btn-primary">Add More Question</button>
                         </div>
                     </td>
-                    <td>
+                    <td *ngIf="showSubmit">
                         <div class="form-group">
                             <button type="submit" routerLink="/quizdisplay" [disabled]="f.invalid" (click)="QuizContent(f.value)" class="btn btn-primary ">
                                 Submit
@@ -343,7 +343,7 @@
                 <tbody>
                     <td>
                         <div class="form-group">
-                            <button type="submit" (click)="ExtraQuizContent(d.value)" (click)="QuizContent(f.value)" class="btn btn-primary btn-center">Submit</button>
+                            <button type="submit" routerLink="/quizdisplay" [disabled]="d.invalid" (click)="ExtraQuizContent(d.value)" (click)="QuizContent(f.value)" class="btn btn-primary btn-center">Submit</button>
                         </div>
                     </td>
                 </tbody>

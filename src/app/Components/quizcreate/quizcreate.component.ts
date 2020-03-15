@@ -14,6 +14,7 @@ export class QuizcreateComponent implements OnInit {
 
   public LoginContent = [];
   public show:boolean = false;
+  public showSubmit: boolean = true;
 
   constructor(private ls: LoginService, private qs: QuizDataService, private eq: ExtraQuestionService) { }
 
@@ -33,6 +34,10 @@ export class QuizcreateComponent implements OnInit {
 
   toggle() {
     this.show = !this.show;
+  }
+
+  hideSubmit() {
+    this.showSubmit = !this.showSubmit;
   }
 
 }
