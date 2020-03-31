@@ -13,8 +13,11 @@ export class QuizcreateComponent implements OnInit {
   model: any = [];
 
   public LoginContent = [];
-  public show:boolean = false;
+  public show: boolean = false;
   public showSubmit: boolean = true;
+  public count: number = 0;
+  public newSubmit: boolean = false;
+  public extraQPrompt: boolean = false;
 
   constructor(private ls: LoginService, private qs: QuizDataService, private eq: ExtraQuestionService) { }
 
@@ -40,4 +43,17 @@ export class QuizcreateComponent implements OnInit {
     this.showSubmit = !this.showSubmit;
   }
 
+  countClick() {
+    this.count++;
+  }
+
+  newSubmitToggle() {
+    this.newSubmit = !this.newSubmit;
+  }
+
+  extraQuestionPrompt() {
+    this.extraQPrompt = !this.extraQPrompt;
+  }
+
+  
 }

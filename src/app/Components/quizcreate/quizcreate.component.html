@@ -17,9 +17,9 @@
         </table>
     </div>
 </div>
-<br><br>
-<div class="container">
-    <div class="card w-60">
+<br>
+<div class="container text-center">
+    <div class="card w-60 text-center">
         <h5 class="card-header text-center">Input your quiz data below</h5>
         <form class="card-body text-center" #f=ngForm (ngSubmit)="f.form.valid" novalidate>
             <table class="table">
@@ -267,14 +267,13 @@
                         </div>
                     </td>
                 </tbody>
-                <br>
-                <tbody class="table-bordered">
+                <tbody>
                     <td colspan="5">
                         <div class="form-group">
-                            <button type="submit" [disabled]="f.invalid" (click)="hideSubmit()" (click)="toggle()" class="btn btn-primary">Add More Question</button>
+                            <button type="submit" (click)="hideSubmit()" (click)="toggle()" class="btn btn-primary">Add More Question</button>
                         </div>
                     </td>
-                    <td *ngIf="showSubmit">
+                    <td *ngIf="showSubmit" colspan="5">
                         <div class="form-group">
                             <button type="submit" routerLink="/quizdisplay" [disabled]="f.invalid" (click)="QuizContent(f.value)" class="btn btn-primary ">
                                 Submit
@@ -282,15 +281,10 @@
                         </div>
                     </td>
                 </tbody>
-                <br>
             </table>
         </form>
-    </div>
-</div>
-<br>
-<div class="container" *ngIf="show">
-    <div class="card w-60">
-        <form class="card-body" #d=ngForm novalidate>
+        <form class="card-body text-center" #d=ngForm novalidate (ngSubmit)="d.form.valid" *ngIf="show">
+            <h6 class="card-header">Input Your Extra Question Here!!</h6>
             <table class="table">
                 <tbody class="table-bordered">
                     <td colspan="10">
@@ -341,12 +335,21 @@
                     </td>
                 </tbody>
                 <tbody>
-                    <td>
+                    <td colspan="10">
                         <div class="form-group">
-                            <button type="submit" routerLink="/quizdisplay" [disabled]="d.invalid" (click)="ExtraQuizContent(d.value)" (click)="QuizContent(f.value)" class="btn btn-primary btn-center">Submit</button>
+                            <button type="submit" (click)="newSubmitToggle()" [disabled]="d.invalid" (click)="countClick()" (click)="ExtraQuizContent(d.value)" (click)="QuizContent(f.value)" class="btn btn-primary btn-center">Submit</button>
                         </div>
                     </td>
+                    <!-- <td *ngIf="newSubmit">
+                        <div class="form-group">
+                            <button routerLink="/quizdisplay" [disabled]="d.invalid" (click)="extraQuestionPrompt()" (click)="countClick()" (click)="ExtraQuizContent(d.value)" class="btn btn-primary btn-center">Submit</button>
+                        </div>
+                    </td> -->
                 </tbody>
+                <!-- <tbody *ngIf="extraQPrompt">
+                    <td colspan="10" class="card-header text-center">Do You Want To Add One More Question?</td>
+                    <td colspan="5"><button class="btn btn-success">Yes</button><button class="btn btn-danger" style="margin-left:30px;">No</button></td>
+                </tbody> -->
             </table>
         </form>
     </div>

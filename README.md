@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
 
+## Instructions to Run -
+    1. Make sure to install npm modules by running the command - 'npm install' in the root directory
+    2. Additionally Run the following commands to install necessary modules if not installed by default - 
+        a) npm install bootstrap
+        b) npm install popper.js
+        c) npm install jquery
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
